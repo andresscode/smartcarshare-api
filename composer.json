@@ -1,0 +1,7 @@
+{
+    "require": {
+        "slim/slim": "^3.8",
+        "firebase/php-jwt": "^5.0",
+        "illuminate/database": "^5.5"
+    }
+}
