@@ -10,6 +10,7 @@ $app = new \Slim\App;
 
 // Routes
 require '../src/routes/auth.php';
+require '../src/routes/users.php';
 require '../src/routes/members.php';
 
 $app->run();

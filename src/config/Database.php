@@ -57,6 +57,14 @@ class Database
         }
     }
 
+    /**
+     * Queries the database to insert (POST) the data passed in the query string. The method will try to insert the
+     * data into the database and will check if there is any error with the database to return the database message
+     * or returning the id number of the new insertion in case there is no errors.
+     *
+     * @param $query String with the data to insert, i.e. "INSERT INTO table (column, column) VALUES (value, value)"
+     * @return int ID of the resource created in the database, or, the String message in case of error.
+     */
     public function post($query)
     {
         try

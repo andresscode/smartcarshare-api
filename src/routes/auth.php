@@ -15,15 +15,25 @@ $app->get('/auth/token', auth);
 
 /*
  * =====================================================================================================================
- * Helper Methods
+ * Methods
  * =====================================================================================================================
  */
 
+// Constants
 const TOKEN_ENCODE_LENGTH = 32;
 const NOT_BEFORE_TIME = 10;
 const EXPIRE_TIME = 60;
 const SECRET_KEY = 'holmesglensuckssomuch';
 
+/**
+ * Gets the username [email] and password from the Authorization basic header to validate the credentials in the
+ * database and returning a JWT.
+ *
+ * @param Request $request
+ * @param Response $response
+ * @return mixed Returns a JWT if the credentials are correct, otherwise, if the username [email] is not registered
+ * in the database returns an error or if the password is incorrect for a given username [email].
+ */
 function auth(Request $request, Response $response)
 {
     $username = $_SERVER['PHP_AUTH_USER'];
@@ -68,17 +78,17 @@ function auth(Request $request, Response $response)
 
             $payload = ['jwt' => $jwt];
             $myResponse = new MyResponse(MyResponse::MSG_USER_AUTHENTICATED, $payload);
-            return $response->withJson($myResponse->getArray());
+            return $response->withJson($myResponse->asArray());
         }
         else
         {
-            $myResponse = new MyResponse(MyResponse::MSG_PASSWORD_NOT_MATCH, null);
-            return $response->withJson($myResponse->getArray(), MyResponse::HTTP_BAD_REQUEST);
+            $myResponse = new MyResponse(MyResponse::ERROR_PASSWORD_NOT_MATCH, null);
+            return $response->withJson($myResponse->asArray(), MyResponse::HTTP_BAD_REQUEST);
         }
     }
     else
     {
-        $myResponse = new MyResponse(MyResponse::MSG_USERNAME_NOT_FOUND, null);
-        return $response->withJson($myResponse->getArray(), MyResponse::HTTP_BAD_REQUEST);
+        $myResponse = new MyResponse(MyResponse::ERROR_EMAIL_NOT_FOUND, null);
+        return $response->withJson($myResponse->asArray(), MyResponse::HTTP_BAD_REQUEST);
     }
 }
