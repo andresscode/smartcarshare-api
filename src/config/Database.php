@@ -4,6 +4,9 @@
  * User: Andress
  * Date: 4/11/17
  * Time: 4:50 PM
+ *
+ * Provides all the functionality related to the database, like the connection settings and, querying the database
+ * to do any CRUD operation.
  */
 
 class Database

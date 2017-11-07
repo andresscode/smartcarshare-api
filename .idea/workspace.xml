@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5903b6fc-b357-4134-bf00-b1f1a42b1f7b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.php" afterPath="$PROJECT_DIR$/public/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/MyResponse.php" afterPath="$PROJECT_DIR$/src/models/MyResponse.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/auth.php" afterPath="$PROJECT_DIR$/src/routes/auth.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/config/Database.php" afterPath="$PROJECT_DIR$/src/config/Database.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/middleware/AuthMiddleware.php" afterPath="$PROJECT_DIR$/src/middleware/AuthMiddleware.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/members.php" afterPath="$PROJECT_DIR$/src/routes/members.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/users.php" afterPath="$PROJECT_DIR$/src/routes/users.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,8 +19,8 @@
       <file leaf-file-name="users.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/routes/users.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="21" column="28" lean-forward="true" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+            <state relative-caret-position="105">
+              <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
               <folding>
                 <element signature="e#90#146#0#PHP" expanded="true" />
                 <marker date="1510020045000" expanded="true" signature="1034:1137" ph="INSERT INTO users... " />
@@ -31,16 +29,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="members.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="members.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/routes/members.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="32" column="31" lean-forward="true" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
+            <state relative-caret-position="706">
+              <caret line="76" column="9" lean-forward="true" selection-start-line="76" selection-start-column="9" selection-end-line="76" selection-end-column="9" />
               <folding>
                 <element signature="e#90#146#0#PHP" expanded="true" />
-                <marker date="1510030125000" expanded="true" signature="1101:1140" ph="SELECT id FR... members" />
-                <marker date="1510030125000" expanded="true" signature="1101:1141" ph="SELECT id FR... members" />
-                <marker date="1510030125000" expanded="true" signature="1355:1560" ph="INSERT INTO members... " />
+                <marker date="1510044026000" expanded="true" signature="1101:1140" ph="SELECT id FR... members" />
+                <marker date="1510044026000" expanded="true" signature="1101:1141" ph="SELECT id FR... members" />
+                <marker date="1510044026000" expanded="true" signature="1355:1560" ph="INSERT INTO members... " />
               </folding>
             </state>
           </provider>
@@ -49,8 +47,8 @@
       <file leaf-file-name="Database.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/config/Database.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="795">
-              <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+            <state relative-caret-position="15">
+              <caret line="1" column="3" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -59,8 +57,8 @@
       <file leaf-file-name="auth.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/routes/auth.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+            <state relative-caret-position="-158">
+              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="52" />
               <folding>
                 <element signature="e#90#146#0#PHP" expanded="true" />
                 <marker date="1510027415000" expanded="true" signature="1240:1291" ph="SELECT email... users" />
@@ -76,21 +74,23 @@
       <file leaf-file-name="AuthMiddleware.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/middleware/AuthMiddleware.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="33" column="37" lean-forward="true" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
+            <state relative-caret-position="180">
+              <caret line="26" column="59" lean-forward="true" selection-start-line="26" selection-start-column="59" selection-end-line="26" selection-end-column="59" />
               <folding>
-                <element signature="e#90#146#0#PHP" expanded="true" />
+                <element signature="e#554#610#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyResponse.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MyResponse.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/models/MyResponse.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="56" lean-forward="true" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="56" />
-              <folding />
+            <state relative-caret-position="0">
+              <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+              <folding>
+                <element signature="e#6#640#0#PHP" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -98,9 +98,33 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="31" lean-forward="false" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+            <state relative-caret-position="540">
+              <caret line="36" column="36" lean-forward="true" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cors.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/routes/cors.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="3" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+              <folding>
+                <element signature="e#242#298#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CORSMiddleware.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/middleware/CORSMiddleware.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="3" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+              <folding>
+                <element signature="e#241#297#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -127,13 +151,15 @@
         <option value="$PROJECT_DIR$/src/models/ResponseMessage.php" />
         <option value="$PROJECT_DIR$/src/models/Response.php" />
         <option value="$PROJECT_DIR$/src/routes/member.php" />
-        <option value="$PROJECT_DIR$/src/config/Database.php" />
         <option value="$PROJECT_DIR$/src/middleware/Auth.php" />
         <option value="$PROJECT_DIR$/src/routes/users.php" />
         <option value="$PROJECT_DIR$/src/routes/auth.php" />
-        <option value="$PROJECT_DIR$/public/index.php" />
-        <option value="$PROJECT_DIR$/src/middleware/AuthMiddleware.php" />
         <option value="$PROJECT_DIR$/src/models/MyResponse.php" />
+        <option value="$PROJECT_DIR$/src/config/Database.php" />
+        <option value="$PROJECT_DIR$/src/middleware/CORSMiddleware.php" />
+        <option value="$PROJECT_DIR$/src/middleware/AuthMiddleware.php" />
+        <option value="$PROJECT_DIR$/public/index.php" />
+        <option value="$PROJECT_DIR$/src/routes/cors.php" />
         <option value="$PROJECT_DIR$/src/routes/members.php" />
       </list>
     </option>
@@ -247,12 +273,12 @@
       <workItem from="1509768635282" duration="13701000" />
       <workItem from="1509844745633" duration="24736000" />
       <workItem from="1509965072692" duration="6821000" />
-      <workItem from="1510016814578" duration="10354000" />
+      <workItem from="1510016814578" duration="15332000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55612000" />
+    <option name="totallyTimeSpent" value="60590000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -305,9 +331,9 @@
           <caret line="12" column="34" lean-forward="true" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
           <folding>
             <element signature="e#90#146#0#PHP" expanded="true" />
-            <marker date="1510030125000" expanded="true" signature="1101:1140" ph="SELECT id FR... members" />
-            <marker date="1510030125000" expanded="true" signature="1101:1141" ph="SELECT id FR... members" />
-            <marker date="1510030125000" expanded="true" signature="1355:1560" ph="INSERT INTO members... " />
+            <marker date="1510044026000" expanded="true" signature="1101:1140" ph="SELECT id FR... members" />
+            <marker date="1510044026000" expanded="true" signature="1101:1141" ph="SELECT id FR... members" />
+            <marker date="1510044026000" expanded="true" signature="1355:1560" ph="INSERT INTO members... " />
           </folding>
         </state>
       </provider>
@@ -347,7 +373,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="30" column="74" lean-forward="true" selection-start-line="30" selection-start-column="74" selection-end-line="30" selection-end-column="74" />
-          <folding />
+          <folding>
+            <element signature="e#6#640#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -381,7 +409,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="18" column="74" lean-forward="false" selection-start-line="18" selection-start-column="74" selection-end-line="18" selection-end-column="74" />
-          <folding />
+          <folding>
+            <element signature="e#6#640#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -450,37 +480,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/middleware/Auth.php" />
-    <entry file="file://$PROJECT_DIR$/src/routes/users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="21" column="28" lean-forward="true" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
-          <folding>
-            <element signature="e#90#146#0#PHP" expanded="true" />
-            <marker date="1510020045000" expanded="true" signature="1034:1137" ph="INSERT INTO users... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/config/Database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="31" lean-forward="false" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/auth.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+        <state relative-caret-position="-158">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="52" />
           <folding>
             <element signature="e#90#146#0#PHP" expanded="true" />
             <marker date="1510027415000" expanded="true" signature="1240:1291" ph="SELECT email... users" />
@@ -492,34 +495,83 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/members.php">
+    <entry file="file://$PROJECT_DIR$/src/middleware/CORSMiddleware.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="32" column="31" lean-forward="true" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
+        <state relative-caret-position="15">
+          <caret line="1" column="3" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
           <folding>
-            <element signature="e#90#146#0#PHP" expanded="true" />
-            <marker date="1510030125000" expanded="true" signature="1101:1140" ph="SELECT id FR... members" />
-            <marker date="1510030125000" expanded="true" signature="1101:1141" ph="SELECT id FR... members" />
-            <marker date="1510030125000" expanded="true" signature="1355:1560" ph="INSERT INTO members... " />
+            <element signature="e#241#297#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/cors.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="3" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+          <folding>
+            <element signature="e#242#298#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="36" lean-forward="true" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/MyResponse.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding>
+            <element signature="e#6#640#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/middleware/AuthMiddleware.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="33" column="37" lean-forward="true" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
+        <state relative-caret-position="180">
+          <caret line="26" column="59" lean-forward="true" selection-start-line="26" selection-start-column="59" selection-end-line="26" selection-end-column="59" />
           <folding>
-            <element signature="e#90#146#0#PHP" expanded="true" />
+            <element signature="e#554#610#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/MyResponse.php">
+    <entry file="file://$PROJECT_DIR$/src/config/Database.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="56" lean-forward="true" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="56" />
+        <state relative-caret-position="15">
+          <caret line="1" column="3" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+          <folding>
+            <element signature="e#90#146#0#PHP" expanded="true" />
+            <marker date="1510020045000" expanded="true" signature="1034:1137" ph="INSERT INTO users... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/members.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="706">
+          <caret line="76" column="9" lean-forward="true" selection-start-line="76" selection-start-column="9" selection-end-line="76" selection-end-column="9" />
+          <folding>
+            <element signature="e#90#146#0#PHP" expanded="true" />
+            <marker date="1510044026000" expanded="true" signature="1101:1140" ph="SELECT id FR... members" />
+            <marker date="1510044026000" expanded="true" signature="1101:1141" ph="SELECT id FR... members" />
+            <marker date="1510044026000" expanded="true" signature="1355:1560" ph="INSERT INTO members... " />
+          </folding>
         </state>
       </provider>
     </entry>

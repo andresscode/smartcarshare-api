@@ -84,5 +84,4 @@ function addMember(Request $request, Response $response)
         $myResponse = new MyResponse(MyResponse::ERROR_MEMBER_ALREADY_EXISTS, null);
         return $response->withJson($myResponse->asArray(), MyResponse::HTTP_BAD_REQUEST);
     }
-
 }

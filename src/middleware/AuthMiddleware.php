@@ -4,6 +4,15 @@
  * User: Andress
  * Date: 7/11/17
  * Time: 1:06 PM
+ *
+ * Handles the authorization process checking if the requests have a valid JWT, following this process:
+ *
+ * 1. Gets the Authorization header from the request.
+ * 2. Checks if the Authorization header was sent.
+ * 3. Checks if the Authorization header has the right format [Bearer].
+ * 4. Tries to decode the JWT.
+ * 4.1. If the JWT is invalid prompts the error message.
+ * 4.2. If the JWT is valid continues to the next route passing the data from the token.
  */
 
 use \Psr\Http\Message\ServerRequestInterface as Request;
