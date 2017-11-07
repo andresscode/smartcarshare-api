@@ -6,9 +6,10 @@
  * Time: 4:01 PM
  */
 
-use Firebase\JWT\JWT;
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
+
+use Firebase\JWT\JWT;
 
 // URLs
 $app->get('/auth/token', auth);
@@ -22,8 +23,7 @@ $app->get('/auth/token', auth);
 // Constants
 const TOKEN_ENCODE_LENGTH = 32;
 const NOT_BEFORE_TIME = 10;
-const EXPIRE_TIME = 60;
-const SECRET_KEY = 'holmesglensuckssomuch';
+const EXPIRE_TIME = 120;
 
 /**
  * Gets the username [email] and password from the Authorization basic header to validate the credentials in the

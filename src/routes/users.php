@@ -19,7 +19,6 @@ $app->post('/users', addUser);
  */
 
 // Constants
-const DATE_TIME_FORMAT = 'Y-m-d H:i:s';
 const ROLE_VALUE = 'member';
 
 // Users columns
