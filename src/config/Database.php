@@ -94,4 +94,36 @@ class Database
             die("There was a problem with the database " . $e->getMessage());
         }
     }
+
+    /**
+     * Queries the database to update a record (PUT), the difference with the POST method is that this one does not
+     * returns any data from the resources updated, just true if the resource was updated or message error.
+     *
+     * @param $query String with the data to insert, i.e. "UPDATE table SET column = value WHERE column = value"
+     * @return bool
+     */
+    public function put($query)
+    {
+        try
+        {
+            $con = $this->connect();
+
+            $stmt = $con->prepare($query);
+            $stmt->execute();
+
+            if ($stmt->errorCode() != 0000)
+            {
+                $con = null;
+                return $stmt->errorInfo()[2];
+            }
+
+            $con = null;
+
+            return true;
+        }
+        catch (PDOException $e)
+        {
+            die("There was a problem with the database " . $e->getMessage());
+        }
+    }
 }

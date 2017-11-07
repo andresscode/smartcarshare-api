@@ -65,8 +65,7 @@ function auth(Request $request, Response $response)
                 'nbf' => $notBefore,
                 'exp' => $expire,
                 'data' => array(
-                    'userId' => $user->id,
-                    'userEmail' => $user->email
+                    'userId' => $user->id
                 )
             );
 

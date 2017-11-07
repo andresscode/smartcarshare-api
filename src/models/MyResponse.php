@@ -20,6 +20,8 @@ class MyResponse
     // HTTP status codes
     const HTTP_BAD_REQUEST = 400;
     const HTTP_UNAUTHORIZED = 401;
+    const HTTP_FORBIDDEN = 403;
+    const HTTP_OK = 200;
     const HTTP_CREATED = 201;
 
     // Error messages
@@ -28,11 +30,14 @@ class MyResponse
     const ERROR_MEMBER_ALREADY_EXISTS = 'The member already exists in the database';
     const ERROR_AUTH_HEADER_MISSING = 'The Authorization header is missing';
     const ERROR_AUTH_HEADER_FORMAT = 'The Authorization header format is not compatible';
+    const ERROR_FORBIDDEN = 'You have no permission to access this resource';
+    const ERROR_MISSING_BODY = 'There is no body in the request';
 
     // Returning messages
     const MSG_USER_AUTHENTICATED = 'The user has been authenticated successfully';
     const MSG_USER_CREATED = 'The user has been created successfully';
     const MSG_MEMBER_CREATED = 'The member has been created successfully';
+    const MSG_RESOURCE_UPDATED = 'The resource was updated successfully';
 
     // Fields
     private $array;
