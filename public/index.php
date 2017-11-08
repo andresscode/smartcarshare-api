@@ -35,5 +35,6 @@ require '../src/routes/cors.php';
 require '../src/routes/auth.php';
 require '../src/routes/users.php';
 require '../src/routes/members.php';
+require '../src/routes/memberships.php';
 
 $app->run();

@@ -1,4 +1,8 @@
 <?php
+
+use \Psr\Http\Message\ServerRequestInterface as Request;
+use \Psr\Http\Message\ResponseInterface as Response;
+
 /**
  * Created by PhpStorm.
  * User: Andress
@@ -8,9 +12,6 @@
  * This middleware handles the Cross-Origin Resource Sharing support for web browsers. This middleware is attached
  * to every route in the server.
  */
-
-use \Psr\Http\Message\ServerRequestInterface as Request;
-use \Psr\Http\Message\ResponseInterface as Response;
 
 class CORSMiddleware
 {

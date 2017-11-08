@@ -1,4 +1,10 @@
 <?php
+
+use \Psr\Http\Message\ServerRequestInterface as Request;
+use \Psr\Http\Message\ResponseInterface as Response;
+
+use Firebase\JWT\JWT;
+
 /**
  * Created by PhpStorm.
  * User: Andress
@@ -14,11 +20,6 @@
  * 4.1. If the JWT is invalid prompts the error message.
  * 4.2. If the JWT is valid continues to the next route passing the data from the token.
  */
-
-use \Psr\Http\Message\ServerRequestInterface as Request;
-use \Psr\Http\Message\ResponseInterface as Response;
-
-use Firebase\JWT\JWT;
 
 class AuthMiddleware
 {

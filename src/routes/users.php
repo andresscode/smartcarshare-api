@@ -1,13 +1,14 @@
 <?php
+
+use \Psr\Http\Message\ServerRequestInterface as Request;
+use \Psr\Http\Message\ResponseInterface as Response;
+
 /**
  * Created by PhpStorm.
  * User: Andress
  * Date: 5/11/17
  * Time: 9:58 PM
  */
-
-use \Psr\Http\Message\ServerRequestInterface as Request;
-use \Psr\Http\Message\ResponseInterface as Response;
 
 // URLs
 $app->group('/users', function()
