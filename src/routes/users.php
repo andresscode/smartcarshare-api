@@ -28,16 +28,16 @@ $app->group('/users', function()
 
 // Constants
 const ROLE_VALUE = 'member';
-const OLD_PASSWORD = 'oldPassword';
-const NEW_PASSWORD = 'newPassword';
+const OLD_PASSWORD = 'old_password';
+const NEW_PASSWORD = 'new_password';
 
 // Users columns
 const ID = 'id';
 const EMAIL = 'email';
 const PASSWORD = 'password';
 const ROLE = 'role';
-const CREATED_AT = 'createdAt';
-const UPDATED_AT = 'updatedAt';
+const CREATED_AT = 'created_at';
+const UPDATED_AT = 'updated_at';
 
 /**
  * Creates a new user into the database.
@@ -93,7 +93,7 @@ function addUser(Request $request, Response $response)
  */
 function changePassword(Request $request, Response $response, $args)
 {
-    $tokenUserId = $request->getAttribute(TOKEN_DATA)->userId;
+    $tokenUserId = $request->getAttribute(TOKEN_DATA)->user_id;
 
     if ($args['id'] == $tokenUserId)
     {

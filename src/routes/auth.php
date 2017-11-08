@@ -65,7 +65,7 @@ function auth(Request $request, Response $response)
                 'nbf' => $notBefore,
                 'exp' => $expire,
                 'data' => array(
-                    'userId' => $user->id
+                    'user_id' => $user->id
                 )
             );
 
@@ -77,7 +77,7 @@ function auth(Request $request, Response $response)
 
             $payload = ['jwt' => $jwt];
             $myResponse = new MyResponse(MyResponse::MSG_USER_AUTHENTICATED, $payload);
-            return $response->withJson($myResponse->asArray());
+            return $response->withJson($myResponse->asArray(), MyResponse::HTTP_OK);
         }
         else
         {
