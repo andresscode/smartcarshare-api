@@ -10,7 +10,11 @@ use \Psr\Http\Message\ResponseInterface as Response;
  * Time: 8:46 PM
  */
 
-$app->post('/memberships', addMembership)->add(new AuthMiddleware());
+$app->group('/memberships', function()
+{
+    $this->post('', addMembership);
+    $this->get('/types', getMembershipTypes);
+})->add(new AuthMiddleware());
 
 /*
  * =====================================================================================================================
@@ -106,6 +110,35 @@ function addMembership(Request $request, Response $response)
     else
     {
         $myResponse = new MyResponse(MyResponse::ERROR_MEMBER_NOT_FOUND, null);
+        return $response->withJson($myResponse->asArray(), MyResponse::HTTP_NOT_FOUND);
+    }
+}
+
+/**
+ * Returns the membership types available to choose.
+ *
+ * @param Request $request
+ * @param Response $response
+ * @return mixed
+ */
+function getMembershipTypes(Request $request, Response $response)
+{
+    $db = new Database();
+
+    $query = sprintf("SELECT * FROM membership_types");
+
+    $result = $db->get($query);
+
+    if (count($result) > 0)
+    {
+        $payload = ['membership_types' => $result];
+
+        $myResponse = new MyResponse(MyResponse::MSG_OK, $payload);
+        return $response->withJson($myResponse->asArray(), MyResponse::HTTP_OK);
+    }
+    else
+    {
+        $myResponse = new MyResponse(MyResponse::ERROR_MEMBERSHIP_NOT_FOUND, null);
         return $response->withJson($myResponse->asArray(), MyResponse::HTTP_NOT_FOUND);
     }
 }

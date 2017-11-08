@@ -1,4 +1,4 @@
-# smartcarshare-api
+# Smartcar Share API
 
 ###### CORS
 
@@ -204,6 +204,42 @@ show how the request body must be send, the response body or, the format of the 
                     "smartcard_no": null,
                     "created_at": "2017-11-09 00:34:27",
                     "updated_at": "2017-11-09 00:34:27"
+                }
+            }
+        }
+```
+
+### Get membership types
+
+* **URL:** /memberships/types
+* **Method:** GET
+* **Headers:** Content-Type, Authorization
+* **URL Parameters:** N/A
+* **Data Parameters:** N/A
+* **Success Response Code:** 200
+* **Error Response Code:** 400, 404
+* **Sample:**
+```javascript
+        {
+            "message": "The membership has been created successfully",
+            "payload": {
+                "membership_types": {
+                        "id": "1",
+                        "name": "Casual",
+                        "annual_fee": "75.00",
+                        "description": "This type of membership is best suited for people who want to use a vehicle up to 10 or 12 times a year.",
+                        "auth_amount": "500.00",
+                        "included_kms": "100.00",
+                        "add_km_charge": "0.43",
+                        "add_driver_fee": "25.00",
+                        "vehicle_small_hour_rate": "10.50",
+                        "vehicle_small_day_rate": "90.00",
+                        "vehicle_large_hour_rate": "14.50",
+                        "vehicle_large_day_rate": "112.00",
+                        "valid_from": "2017-01-01 00:00:00",
+                        "valid_to": "2017-12-31 23:59:59",
+                        "created_at": "2017-11-09 00:34:27",
+                        "updated_at": "2017-11-09 00:34:27"
                 }
             }
         }
