@@ -304,6 +304,54 @@ addition, the `(dateTime)` types must be pass as Strings following this format
         }
 ```
 
+### Insert a review for a vehicle
+
+* **URL:** /vehicles/{id}/reviews
+* **Method:** POST
+* **Headers:** Content-Type, Authorization
+* **URL Parameters:** (int) vehicle_id
+* **Data Parameters:** (String) description
+* **Success Response Code:** 201
+* **Error Response Code:** 400, 404
+* **Sample:**
+```javascript
+        {
+            "message": "The review has been created successfully",
+            "payload": {
+                "review": {
+                    "id": 3,
+                    "vehicle_id": "1",
+                    "author": "Andres Martinez",
+                    "description": "Small but cool"
+                }
+            }
+        }
+```
+
+### Get vehicle reviews
+
+* **URL:** /vehicles/{id}/reviews
+* **Method:** GET
+* **Headers:** Authorization
+* **URL Parameters:** (int) vehicle_id
+* **Data Parameters:** N/A
+* **Success Response Code:** 200
+* **Error Response Code:** 400, 404
+* **Sample:**
+```javascript
+        {
+            "message": "OK",
+            "payload": {
+                "reviews": [
+                    {
+                        "author": "Andres Martinez",
+                        "description": "Small but cool"
+                    }
+                ]
+            }
+        }
+```
+
 ## Locations
 
 ### Get locations

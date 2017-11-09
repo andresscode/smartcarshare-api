@@ -35,6 +35,7 @@ class MyResponse
     const ERROR_MEMBERSHIP_NOT_FOUND = 'The membership does not exists in the database';
     const ERROR_BOOKINGS_FOUND = 'There are not bookings for this membership in the database';
     const ERROR_VEHICLE_NOT_FOUND = 'There are not vehicles available in the database';
+    const ERROR_VEHICLE_REVIEWS_NOT_FOUND = 'There are not reviews for this vehicle';
     const ERROR_LOCATION_NOT_FOUND = 'There are not locations available in the database';
     const ERROR_AUTH_HEADER_MISSING = 'The Authorization header is missing';
     const ERROR_AUTH_HEADER_FORMAT = 'The Authorization header format is not compatible';
@@ -48,6 +49,7 @@ class MyResponse
     const MSG_MEMBER_CREATED = 'The member has been created successfully';
     const MSG_MEMBERSHIP_CREATED = 'The membership has been created successfully';
     const MSG_BOOKING_CREATED = 'The booking has been created successfully';
+    const MSG_REVIEW_CREATED = 'The review has been created successfully';
     const MSG_RESOURCE_UPDATED = 'The resource was updated successfully';
 
     // Fields
