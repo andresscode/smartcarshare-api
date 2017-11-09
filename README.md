@@ -47,11 +47,6 @@ The `(date)` types must be passed as Strings following this format `Y-m-d`. In
 addition, the `(dateTime)` types must be pass as Strings following this format
 `Y-m-d H:i:s`. Boolean values are numerical, `0` for `false` and `1` for `true`.
 
-###### Samples
-
-Please be aware that the samples provided in the documentation of every route could
-show how the request body must be send, the response body or, the format of the header.
-
 ## Users
 
 ### Register new user
@@ -66,8 +61,16 @@ show how the request body must be send, the response body or, the format of the 
 * **Sample:**
 ```javascript
         {
-            "email": "bryan.hoyer@mail.com",
-            "password": "pass1234"
+            "message": "The user has been created successfully",
+            "payload": {
+                "user": {
+                    "email": "bryan.hoyer@mail.com",
+                    "role": "member",
+                    "created_at": "2017-11-09 16:57:20",
+                    "updated_at": "2017-11-09 16:57:20",
+                    "id": 12
+                }
+            }
         }
 ```
 
@@ -83,8 +86,8 @@ show how the request body must be send, the response body or, the format of the 
 * **Sample:**
 ```javascript
         {
-            "old_password": "pass1234",
-            "new_password": "password"
+            "message": "The password does not match",
+            "payload": null
         }
 ```
 
@@ -99,7 +102,15 @@ show how the request body must be send, the response body or, the format of the 
 * **Data Parameters:** (String) email, (String) password
 * **Success Response Code:** 200
 * **Error Response Code:** 400
-* **Sample:** `Basic ZGVzaGF1bi53YXRzb25AbWFpbC5jb206cGFzczEyMzQ=`
+* **Sample:**
+```javascript
+        {
+            "message": "The user has been authenticated successfully",
+            "payload": {
+                "jwt": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1MTAyMjYwOTcsImp0aSI6Ilg1OGxlcWs0b3IydjBZM1Z5c25TYnZlRjZ1ek55WTFpRm1Ldjg5NUxSbDA9IiwiaXNzIjoiQW5kcmVzcy1NYWMtbWluaS5sb2NhbCIsIm5iZiI6MTUxMDIyNjEwNywiZXhwIjoxNTEwMjI2MjI3LCJkYXRhIjp7InVzZXJfaWQiOiI1In19.jKkRmjqmy4YOIv6qiGcl1zJ1uxsv-s8DsykE5R6nS7c"
+            }
+        }
+```
 
 ## Members
 
@@ -115,14 +126,18 @@ show how the request body must be send, the response body or, the format of the 
 * **Sample:**
 ```javascript
         {
-            "lastName": "Hoyer",
-            "firstName": "Bryan",
-            "licenceNo": "ABC0002",
-            "licenceExp": "2018-11-25",
-            "address": "16 Patriots Street",
-            "suburb": "New England",
-            "postcode": 2125,
-            "phone": "0123456789"
+            "message": "Member details inserted successfully",
+            "payload": {
+                "id": "12"
+                "lastName": "Hoyer",
+                "firstName": "Bryan",
+                "licenceNo": "ABC0002",
+                "licenceExp": "2018-11-25",
+                "address": "16 Patriots Street",
+                "suburb": "New England",
+                "postcode": 2125,
+                "phone": "0123456789"    
+            }        
         }
 ```
 
