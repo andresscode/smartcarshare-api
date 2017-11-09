@@ -37,5 +37,6 @@ require '../src/routes/users.php';
 require '../src/routes/members.php';
 require '../src/routes/memberships.php';
 require '../src/routes/vehicles.php';
+require '../src/routes/locations.php';
 
 $app->run();

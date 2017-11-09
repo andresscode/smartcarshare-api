@@ -289,3 +289,49 @@ show how the request body must be send, the response body or, the format of the 
         }
 ```
 
+## Locations
+
+### Get locations
+
+* **URL:** /locations
+* **Method:** GET
+* **Headers:** Authorization
+* **URL Parameters:** N/A
+* **Data Parameters:** N/A
+* **Success Response Code:** 200
+* **Error Response Code:** 400, 404
+* **Sample:**
+```javascript
+        {
+            "message": "OK",
+            "payload": {
+                "locations": [
+                    {
+                        "address": "24 Roses Street",
+                        "suburb": "Chadstone",
+                        "postcode": "3148"
+                    },
+                    {
+                        "address": "35 Down Hill",
+                        "suburb": "White Star",
+                        "postcode": "2210"
+                    },
+                    {
+                        "address": "101 Heinz Street",
+                        "suburb": "Pittsburgh",
+                        "postcode": "3244"
+                    },
+                    {
+                        "address": "21 East Corner",
+                        "suburb": "Sea Boaters",
+                        "postcode": "2015"
+                    },
+                    {
+                        "address": "133 Down Street",
+                        "suburb": "Chadstone",
+                        "postcode": "3148"
+                    }
+                ]
+            }
+        }
+```
