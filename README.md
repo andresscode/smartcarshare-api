@@ -130,11 +130,11 @@ show how the request body must be send, the response body or, the format of the 
 
 * **URL:** /members/{id}
 * **Method:** GET
-* **Headers:** Content-Type, Authorization
+* **Headers:** Authorization
 * **URL Parameters:** (int) user_id
 * **Data Parameters:** N/A
 * **Success Response Code:** 200
-* **Error Response Code:** 403, 404
+* **Error Response Code:** 400, 403, 404
 * **Sample:**
 ```javascript
         {
@@ -213,7 +213,7 @@ show how the request body must be send, the response body or, the format of the 
 
 * **URL:** /memberships/types
 * **Method:** GET
-* **Headers:** Content-Type, Authorization
+* **Headers:** Authorization
 * **URL Parameters:** N/A
 * **Data Parameters:** N/A
 * **Success Response Code:** 200
@@ -244,3 +244,48 @@ show how the request body must be send, the response body or, the format of the 
             }
         }
 ```
+
+## Vehicles
+
+### Get vehicles
+
+* **URL:** /vehicles
+* **Method:** GET
+* **Headers:** Authorization
+* **URL Parameters:** N/A
+* **Data Parameters:** N/A
+* **Success Response Code:** 200
+* **Error Response Code:** 400, 404
+* **Sample:**
+```javascript
+        {
+            "message": "OK",
+            "payload": {
+                "vehicles": [
+                    {
+                        "id": "4",
+                        "rego_no": "BBD342",
+                        "odometer": "23738",
+                        "make": "Chevrolet",
+                        "model": "Captiva",
+                        "colour": "Grey",
+                        "address": "35 Down Hill",
+                        "suburb": "White Star",
+                        "postcode": "2210"
+                    },
+                    {
+                        "id": "2",
+                        "rego_no": "VAD342",
+                        "odometer": "1305",
+                        "make": "Ford",
+                        "model": "Mustang",
+                        "colour": "Black",
+                        "address": "24 Roses Street",
+                        "suburb": "Chadstone",
+                        "postcode": "3148"
+                    }
+                ]
+            }
+        }
+```
+

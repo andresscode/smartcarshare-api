@@ -32,6 +32,7 @@ class MyResponse
     const ERROR_MEMBERSHIP_ALREADY_EXISTS = 'The member has a membership created already';
     const ERROR_MEMBER_NOT_FOUND = 'The member does not exist in the database';
     const ERROR_MEMBERSHIP_NOT_FOUND = 'There are not membership types available in the database';
+    const ERROR_VEHICLE_NOT_FOUND = 'There are not vehicles available in the database';
     const ERROR_AUTH_HEADER_MISSING = 'The Authorization header is missing';
     const ERROR_AUTH_HEADER_FORMAT = 'The Authorization header format is not compatible';
     const ERROR_FORBIDDEN = 'You have no permission to access this resource';
