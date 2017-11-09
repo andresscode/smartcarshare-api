@@ -16,6 +16,7 @@ $app->group('/bookings', function()
     $this->post('', addBooking);
     $this->get('', getBookings);
     $this->put('/{id}', updateBooking);
+    $this->post('/{id}/reports', addDamageReport);
 })->add(new AuthMiddleware());
 
 // Booking columns
@@ -27,6 +28,10 @@ const END_DATE = 'end_date';
 const START_KMS = 'start_kms';
 const CREATED_AT = 'created_at';
 const UPDATED_AT = 'updated_at';
+
+// Report columns
+const BOOKING_ID = 'booking_id';
+const DESCRIPTION = 'description';
 
 /**
  * Registers a new booking for the user.
@@ -247,5 +252,54 @@ function updateBooking(Request $request, Response $response, $args)
     {
         $myResponse = new MyResponse(MyResponse::ERROR_MEMBERSHIP_NOT_FOUND, null);
         return $response->withJson($myResponse->asArray(), MyResponse::HTTP_NOT_FOUND);
+    }
+}
+
+/**
+ * Inserts a new damage report.
+ *
+ * @param Request $request
+ * @param Response $response
+ * @param $args
+ * @return mixed
+ */
+function addDamageReport(Request $request, Response $response, $args)
+{
+    $body = $request->getParsedBody();
+
+    if ($body)
+    {
+        $db = new Database();
+
+        $query = sprintf("INSERT INTO damage_reports (booking_id, description) VALUES (%d, '%s')",
+            $args[ID],
+            $body[DESCRIPTION]
+        );
+
+        $result = $db->post($query);
+
+        if (is_numeric($result))
+        {
+            $report = [
+                ID => $result,
+                BOOKING_ID => $args[ID],
+                DESCRIPTION => $body[DESCRIPTION]
+            ];
+
+            $payload = ['report' => $report];
+
+            $myResponse = new MyResponse(MyResponse::MSG_REPORT_CREATED, $payload);
+            return $response->withJson($myResponse->asArray(), MyResponse::HTTP_CREATED);
+        }
+        else
+        {
+            $myResponse = new MyResponse($result, null);
+            return $response->withJson($myResponse->asArray(), MyResponse::HTTP_BAD_REQUEST);
+        }
+    }
+    else
+    {
+        $myResponse = new MyResponse(MyResponse::ERROR_MISSING_BODY, null);
+        return $response->withJson($myResponse->asArray(), MyResponse::HTTP_BAD_REQUEST);
     }
 }

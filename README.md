@@ -497,3 +497,25 @@ addition, the `(dateTime)` types must be pass as Strings following this format
             "payload": null
         }
 ```
+### Insert a damage report
+
+* **URL:** /bookings/{id}/reports
+* **Method:** POST
+* **Headers:** Content-Type, Authorization
+* **URL Parameters:** (int) booking_id
+* **Data Parameters:** (String) description
+* **Success Response Code:** 201
+* **Error Response Code:** 400, 404
+* **Sample:**
+```javascript
+        {
+            "message": "The report has been created successfully",
+            "payload": {
+                "report": {
+                    "id": 2,
+                    "booking_id": "9",
+                    "description": "The mirrors were broken"
+                }
+            }
+        }
+```

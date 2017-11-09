@@ -50,6 +50,7 @@ class MyResponse
     const MSG_MEMBERSHIP_CREATED = 'The membership has been created successfully';
     const MSG_BOOKING_CREATED = 'The booking has been created successfully';
     const MSG_REVIEW_CREATED = 'The review has been created successfully';
+    const MSG_REPORT_CREATED = 'The report has been created successfully';
     const MSG_RESOURCE_UPDATED = 'The resource was updated successfully';
 
     // Fields
