@@ -138,7 +138,7 @@ function getMembershipTypes(Request $request, Response $response)
     }
     else
     {
-        $myResponse = new MyResponse(MyResponse::ERROR_MEMBERSHIP_NOT_FOUND, null);
+        $myResponse = new MyResponse(MyResponse::ERROR_MEMBERSHIP_TYPE_NOT_FOUND, null);
         return $response->withJson($myResponse->asArray(), MyResponse::HTTP_NOT_FOUND);
     }
 }

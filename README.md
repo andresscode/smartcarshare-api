@@ -335,3 +335,102 @@ show how the request body must be send, the response body or, the format of the 
             }
         }
 ```
+
+## Bookings
+
+### Create a booking
+
+* **URL:** /bookings
+* **Method:** POST
+* **Headers:** Content-Type, Authorization
+* **URL Parameters:** N/A
+* **Data Parameters:** (int) vehicle_id, (dateTime) start_date, (dateTime) end_date
+* **Success Response Code:** 201
+* **Error Response Code:** 400, 404
+* **Sample:**
+```javascript
+        {
+            "message": "The booking has been created successfully",
+            "payload": {
+                "booking": {
+                    "id": 8,
+                    "membership_id": "1",
+                    "vehicle_id": 2,
+                    "start_date": "2017-11-10 06:00:00",
+                    "end_date": "2017-11-11 06:00:00",
+                    "start_kms": "1305"
+                }
+            }
+        }
+```
+
+### Get bookings
+
+* **URL:** /bookings
+* **Method:** GET
+* **Headers:** Authorization
+* **URL Parameters:** N/A
+* **Data Parameters:** N/A
+* **Success Response Code:** 200
+* **Error Response Code:** 400, 404
+* **Sample:**
+```javascript
+        {
+            "message": "OK",
+            "payload": {
+                "bookings": [
+                    {
+                        "id": "5",
+                        "membership_id": "1",
+                        "vehicle_id": "2",
+                        "start_date": "2017-11-10 06:00:00",
+                        "end_date": "2017-11-11 06:00:00",
+                        "start_kms": "1",
+                        "return_date": null,
+                        "return_kms": null,
+                        "fuel": null,
+                        "insurance": null,
+                        "total_gst_exc": null,
+                        "gst": null,
+                        "notes": null,
+                        "created_at": null,
+                        "updated_at": null
+                    },
+                    {
+                        "id": "6",
+                        "membership_id": "1",
+                        "vehicle_id": "2",
+                        "start_date": "2017-11-10 06:00:00",
+                        "end_date": "2017-11-11 06:00:00",
+                        "start_kms": "1",
+                        "return_date": null,
+                        "return_kms": null,
+                        "fuel": null,
+                        "insurance": null,
+                        "total_gst_exc": null,
+                        "gst": null,
+                        "notes": null,
+                        "created_at": null,
+                        "updated_at": null
+                    }
+                ]
+            }
+        }
+```
+
+### Update a booking
+
+* **URL:** /bookings/{id}
+* **Method:** PUT
+* **Headers:** Content-Type, Authorization
+* **URL Parameters:** (int) booking_id
+* **Data Parameters:** (int) vehicle_id, (dateTime) start_date, (dateTime) end_date
+* **Success Response Code:** 200
+* **Error Response Code:** 400, 403, 404
+* **Sample:**
+```javascript
+        {
+            "message": "The resource was updated successfully",
+            "payload": null
+        }
+```

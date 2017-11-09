@@ -31,7 +31,9 @@ class MyResponse
     const ERROR_MEMBER_ALREADY_EXISTS = 'The member already exists in the database';
     const ERROR_MEMBERSHIP_ALREADY_EXISTS = 'The member has a membership created already';
     const ERROR_MEMBER_NOT_FOUND = 'The member does not exist in the database';
-    const ERROR_MEMBERSHIP_NOT_FOUND = 'There are not membership types available in the database';
+    const ERROR_MEMBERSHIP_TYPE_NOT_FOUND = 'There are not membership types available in the database';
+    const ERROR_MEMBERSHIP_NOT_FOUND = 'The membership does not exists in the database';
+    const ERROR_BOOKINGS_FOUND = 'There are not bookings for this membership in the database';
     const ERROR_VEHICLE_NOT_FOUND = 'There are not vehicles available in the database';
     const ERROR_LOCATION_NOT_FOUND = 'There are not locations available in the database';
     const ERROR_AUTH_HEADER_MISSING = 'The Authorization header is missing';
@@ -45,6 +47,7 @@ class MyResponse
     const MSG_USER_CREATED = 'The user has been created successfully';
     const MSG_MEMBER_CREATED = 'The member has been created successfully';
     const MSG_MEMBERSHIP_CREATED = 'The membership has been created successfully';
+    const MSG_BOOKING_CREATED = 'The booking has been created successfully';
     const MSG_RESOURCE_UPDATED = 'The resource was updated successfully';
 
     // Fields
