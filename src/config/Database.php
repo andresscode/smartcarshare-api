@@ -12,15 +12,15 @@
 class Database
 {
     // Fields
-//    private $dbHost = 'us-cdbr-iron-east-05.cleardb.net';
-//    private $dbName = 'heroku_a028403062390ef';
-//    private $dbUser = 'b1b2b4ef4db8de';
-//    private $dbPass = 'd1a6d601';
+    private $dbHost = 'us-cdbr-iron-east-05.cleardb.net';
+    private $dbName = 'heroku_a028403062390ef';
+    private $dbUser = 'b1b2b4ef4db8de';
+    private $dbPass = 'd1a6d601';
 
-    private $dbHost = 'localhost';
-    private $dbName = 'smartcarshare';
-    private $dbUser = 'root';
-    private $dbPass = 'root';
+//    private $dbHost = 'localhost';
+//    private $dbName = 'smartcarshare';
+//    private $dbUser = 'root';
+//    private $dbPass = 'root';
 
     /**
      * Connects to the default MySQL database.
