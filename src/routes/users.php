@@ -110,23 +110,15 @@ function changePassword(Request $request, Response $response, $args)
 
             $hash = $result[0]->password;
 
-            var_dump("hash = " . $hash);
-
             $oldPassword = $body[OLD_PASSWORD];
-
-            var_dump("oldPass = " . $oldPassword);
 
             if (password_verify($oldPassword, $hash))
             {
                 $newPasswordHash = password_hash($body[NEW_PASSWORD], PASSWORD_BCRYPT);
 
-                var_dump("newPass = " . $newPasswordHash);
-
                 $query = sprintf("UPDATE users SET password = '%s' WHERE id = %d", $newPasswordHash, $tokenUserId);
 
                 $result = $db->put($query);
-
-                var_dump("result = " . $result);
 
                 if ($result == true)
                 {
