@@ -51,7 +51,7 @@ addition, the `(dateTime)` types must be pass as Strings following this format
 
 ### Register new user
 
-* **URL:** /users
+* **URL:** https://smartcarshare-api.herokuapp.com/users
 * **Method:** POST
 * **Headers:** Content-Type
 * **URL Parameters:** N/A
@@ -76,7 +76,7 @@ addition, the `(dateTime)` types must be pass as Strings following this format
 
 ### Change password
 
-* **URL:** /users/{id}/changePassword
+* **URL:** https://smartcarshare-api.herokuapp.com/users/{id}/changePassword
 * **Method:** PUT
 * **Headers:** Content-Type, Authorization
 * **URL Parameters:** (int) user_id
@@ -95,7 +95,7 @@ addition, the `(dateTime)` types must be pass as Strings following this format
 
 ### Get JWT
 
-* **URL:** /auth/token
+* **URL:** https://smartcarshare-api.herokuapp.com/auth/token
 * **Method:** GET
 * **Headers:** Authorization
 * **URL Parameters:** N/A
@@ -116,7 +116,7 @@ addition, the `(dateTime)` types must be pass as Strings following this format
 
 ### Insert member details
 
-* **URL:** /members
+* **URL:** https://smartcarshare-api.herokuapp.com/members
 * **Method:** POST
 * **Headers:** Content-Type, Authorization
 * **URL Parameters:** N/A
@@ -143,7 +143,7 @@ addition, the `(dateTime)` types must be pass as Strings following this format
 
 ### Get member details
 
-* **URL:** /members/{id}
+* **URL:** https://smartcarshare-api.herokuapp.com/members/{id}
 * **Method:** GET
 * **Headers:** Authorization
 * **URL Parameters:** (int) user_id
@@ -175,7 +175,7 @@ addition, the `(dateTime)` types must be pass as Strings following this format
 
 ### Update member details
 
-* **URL:** /members/{id}
+* **URL:** https://smartcarshare-api.herokuapp.com/members/{id}
 * **Method:** PUT
 * **Headers:** Content-Type, Authorization
 * **URL Parameters:** (int) user_id
@@ -194,7 +194,7 @@ addition, the `(dateTime)` types must be pass as Strings following this format
 
 ### Register new membership
 
-* **URL:** /memberships
+* **URL:** https://smartcarshare-api.herokuapp.com/memberships
 * **Method:** POST
 * **Headers:** Content-Type, Authorization
 * **URL Parameters:** N/A
@@ -226,7 +226,7 @@ addition, the `(dateTime)` types must be pass as Strings following this format
 
 ### Get membership types
 
-* **URL:** /memberships/types
+* **URL:** https://smartcarshare-api.herokuapp.com/memberships/types
 * **Method:** GET
 * **Headers:** Authorization
 * **URL Parameters:** N/A
@@ -264,7 +264,7 @@ addition, the `(dateTime)` types must be pass as Strings following this format
 
 ### Get vehicles
 
-* **URL:** /vehicles
+* **URL:** https://smartcarshare-api.herokuapp.com/vehicles
 * **Method:** GET
 * **Headers:** Authorization
 * **URL Parameters:** N/A
@@ -306,7 +306,7 @@ addition, the `(dateTime)` types must be pass as Strings following this format
 
 ### Insert a review for a vehicle
 
-* **URL:** /vehicles/{id}/reviews
+* **URL:** https://smartcarshare-api.herokuapp.com/vehicles/{id}/reviews
 * **Method:** POST
 * **Headers:** Content-Type, Authorization
 * **URL Parameters:** (int) vehicle_id
@@ -330,7 +330,7 @@ addition, the `(dateTime)` types must be pass as Strings following this format
 
 ### Get vehicle reviews
 
-* **URL:** /vehicles/{id}/reviews
+* **URL:** https://smartcarshare-api.herokuapp.com/vehicles/{id}/reviews
 * **Method:** GET
 * **Headers:** Authorization
 * **URL Parameters:** (int) vehicle_id
@@ -356,7 +356,7 @@ addition, the `(dateTime)` types must be pass as Strings following this format
 
 ### Get locations
 
-* **URL:** /locations
+* **URL:** https://smartcarshare-api.herokuapp.com/locations
 * **Method:** GET
 * **Headers:** Authorization
 * **URL Parameters:** N/A
@@ -403,7 +403,7 @@ addition, the `(dateTime)` types must be pass as Strings following this format
 
 ### Create a booking
 
-* **URL:** /bookings
+* **URL:** https://smartcarshare-api.herokuapp.com/bookings
 * **Method:** POST
 * **Headers:** Content-Type, Authorization
 * **URL Parameters:** N/A
@@ -429,7 +429,7 @@ addition, the `(dateTime)` types must be pass as Strings following this format
 
 ### Get bookings
 
-* **URL:** /bookings
+* **URL:** https://smartcarshare-api.herokuapp.com/bookings
 * **Method:** GET
 * **Headers:** Authorization
 * **URL Parameters:** N/A
@@ -483,7 +483,7 @@ addition, the `(dateTime)` types must be pass as Strings following this format
 
 ### Update a booking
 
-* **URL:** /bookings/{id}
+* **URL:** https://smartcarshare-api.herokuapp.com/bookings/{id}
 * **Method:** PUT
 * **Headers:** Content-Type, Authorization
 * **URL Parameters:** (int) booking_id
@@ -499,7 +499,7 @@ addition, the `(dateTime)` types must be pass as Strings following this format
 ```
 ### Insert a damage report
 
-* **URL:** /bookings/{id}/reports
+* **URL:** https://smartcarshare-api.herokuapp.com/bookings/{id}/reports
 * **Method:** POST
 * **Headers:** Content-Type, Authorization
 * **URL Parameters:** (int) booking_id
